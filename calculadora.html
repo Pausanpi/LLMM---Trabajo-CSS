@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Windows 98</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="calcu.css">
+		<link rel="icon" href="https://win98icons.alexmeub.com/icons/png/windows-0.png">
+	</head>
+	<body>
+
+		<div class="main">
+			<div class="izq">
+				<a href="index.html">
+					<div class="boton">
+						<img src="https://win98icons.alexmeub.com/icons/png/directory_closed-4.png">
+						<p>Carpeta</p>
+					</div>
+				</a>
+				<a href="tamagotchi.html">
+					<div class="boton">
+						<img class="tama" src="assets/tamagotchi.png">
+						<p>Tamagotchi</p>
+					</div>
+				</a>
+				<a href="huevo.html">
+					<div class="boton">
+						<img class="tama" src="assets/blando.png">
+						<p>Egg-Timer</p>
+					</div>
+				</a>
+				<div class="boton">
+					<img class="tama" src="https://win98icons.alexmeub.com/icons/png/calculator-0.png">
+					<p>Calculadora</p>
+				</div>
+				<a href="pokedex.html">
+					<div class="boton">
+						<img class="tama" src="assets/pokedex.png">
+						<p>Pokédex</p>
+					</div>
+				</a>
+				<a href="minecraft.html">
+					<div class="boton">
+						<img class="tama" src="https://www.rw-designer.com/icon-image/5547-256x256x32.png">
+						<p>Minecraft</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="centro">
+				<div class="ventana">
+					<div class="cabecera">
+						<span>Calculadora</span>
+						<div class="boton-ventana">
+							<button class="window-button" onclick="window.location.href='index.html'">
+								<img src="https://win98icons.alexmeub.com/images/close-icon.png">
+							</button>
+						</div>
+						
+					</div>
+					<div class="calculadora">
+
+						<div class="line1">
+							<button onclick="limpiar()" class="num">C</button>
+							<div id="pantalla" class="pantalla">0</div>
+						</div>
+
+						<div class="line">
+							<button onclick="operacion('*')" class="num">×</button>
+							<button onclick="agregarNumero('9')" class="num">9</button>
+							<button onclick="agregarNumero('8')" class="num">8</button>
+							<button onclick="agregarNumero('7')" class="num">7</button>
+
+							<button onclick="operacion('/')" class="num">÷</button>
+							<button onclick="agregarNumero('6')" class="num">6</button>
+							<button onclick="agregarNumero('5')" class="num">5</button>
+							<button onclick="agregarNumero('4')" class="num">4</button>
+
+							<button onclick="operacion('+')" class="num">+</button>
+							<button onclick="agregarNumero('3')" class="num">3</button>
+							<button onclick="agregarNumero('2')" class="num">2</button>
+							<button onclick="agregarNumero('1')" class="num">1</button>
+
+							<button onclick="operacion('-')" class="num">-</button>
+							<button onclick="agregarNumero('.')" class="num">.</button>
+							<button onclick="agregarNumero('0')" class="num">0</button>
+							<button onclick="calcular()" class="num">=</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="derch">
+				<div class="meme">
+					<header class="cabecera-meme">
+						<span>Meme</span>
+						<div class="botones-meme">
+							<button class="window-button">
+								<img src="https://win98icons.alexmeub.com/images/question-icon.png">
+							</button>
+							<button class="window-button">
+								<img src="https://win98icons.alexmeub.com/images/close-icon.png">
+							</button>
+						</div>
+
+					</header>
+					<div class="imagen-meme">
+						<div class="fondo-imagen-meme">
+							<img src="https://i.pinimg.com/474x/63/39/2f/63392fa88244d183777fdb1018e4b602.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- FOOTER -->
+		<div class="bar">
+			<div style="display: flex; flex-direction: row;">
+				<div class="start-button">
+					<img src="https://win98icons.alexmeub.com/icons/png/windows-0.png">
+					<span>Start</span>
+				</div>
+				<div class="bar-linea"></div>
+				<div class="abierto">
+					<img src="https://win98icons.alexmeub.com/icons/png/calculator-0.png"
+						style="width: 16px; height: 16px;">
+					<span>Calculadora</span>
+				</div>
+			</div>
+			<div class="time">
+				<img
+					src="https://win98icons.alexmeub.com/icons/png/loudspeaker_rays-0.png">
+				<span id="reloj"></span>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+		<script src="calcula.js"></script>
+	</body>
+</html>

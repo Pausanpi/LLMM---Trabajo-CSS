@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Windows 98</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="pokedex.css">
+	<link rel="icon" href="https://win98icons.alexmeub.com/icons/png/windows-0.png">
+</head>
+<body>
+
+	<div class="main">
+		<div class="izq">
+			<a href="index.html">
+				<div class="boton">
+					<img src="https://win98icons.alexmeub.com/icons/png/directory_closed-4.png">
+					<p>Carpeta</p>
+				</div>
+			</a>
+			<a href="tamagotchi.html">
+				<div class="boton">
+					<img class="tama" src="assets/tamagotchi.png">
+					<p>Tamagotchi</p>
+				</div>
+			</a>
+			<a href="huevo.html">
+				<div class="boton">
+					<img class="tama" src="assets/blando.png">
+					<p>Egg-Timer</p>
+				</div>
+			</a>
+			<a href="calculadora.html">
+				<div class="boton">
+					<img class="tama" src="https://win98icons.alexmeub.com/icons/png/calculator-0.png">
+					<p>Calculadora</p>
+				</div>
+			</a>
+			<div class="boton">
+				<img class="tama" src="assets/pokedex.png">
+				<p>Pokédex</p>
+			</div>
+			<a href="minecraft.html">
+				<div class="boton">
+					<img class="tama" src="https://www.rw-designer.com/icon-image/5547-256x256x32.png">
+					<p>Minecraft</p>
+				</div>
+			</a>
+		</div>
+
+		<div class="centro">
+			<!-- POKEDEX -->
+			<div class="ventana">
+				<div class="cabecera">
+					<span>Pokédex</span>
+					<div class="boton-ventana">
+						<button class="window-button" onclick="window.location.href='index.html'">
+							<img src="https://win98icons.alexmeub.com/images/close-icon.png">
+						</button>
+					</div>
+				</div>
+
+		<div class="contenedor-pokedex">
+			<div class="panel-izquierdo">
+				<div class="busqueda">
+					<label>Buscar Pokémon:</label>
+					<input type="text" id="searchInput" placeholder="Nombre o ID">
+					<button class="btn-buscar" onclick="buscarPokemon()">Buscar</button>
+				</div>
+				
+				<div class="lista-pokemon">
+					<div class="pokemon-item" onclick="cargarPokemon(1)">001 - Bulbasaur</div>
+					<div class="pokemon-item" onclick="cargarPokemon(2)">002 - Ivysaur</div>
+					<div class="pokemon-item" onclick="cargarPokemon(3)">003 - Venasaur</div>
+					<div class="pokemon-item" onclick="cargarPokemon(4)">004 - Charmander</div>
+					<div class="pokemon-item" onclick="cargarPokemon(5)">005 - Charmeleon</div>
+					<div class="pokemon-item" onclick="cargarPokemon(6)">006 - Charizard</div>
+					<div class="pokemon-item" onclick="cargarPokemon(7)">007 - Squirtle</div>
+					<div class="pokemon-item" onclick="cargarPokemon(8)">008 - Wartortle</div>
+					<div class="pokemon-item" onclick="cargarPokemon(9)">009 - Blastoise</div>
+					<div class="pokemon-item" onclick="cargarPokemon(25)">025 - Pikachu</div>
+					<div class="pokemon-item" onclick="cargarPokemon(92)">92 - Gastly</div>
+					<div class="pokemon-item" onclick="cargarPokemon(93)">93 - Haunter</div>
+					<div class="pokemon-item" onclick="cargarPokemon(94)">94 - Gengar</div>
+					<div class="pokemon-item" onclick="cargarPokemon(143)">143 - Snorlax</div>
+					<div class="pokemon-item" onclick="cargarPokemon(150)">150 - Mewtwo</div>
+					<div class="pokemon-item" onclick="cargarPokemon(957)">957 - Tinkatin</div>
+					<div class="pokemon-item" onclick="cargarPokemon(958)">958 - Tinkatuff</div>
+					<div class="pokemon-item" onclick="cargarPokemon(959)">959 - Tinkaton</div>
+				</div>
+			</div>
+
+				<div class="panel-derecho">
+					<div class="info-pokemon">
+						<div class="imagen-container">
+							<img id="pokemonImg" src="" alt="Pokémon">
+						</div>
+						
+						<div class="datos-pokemon">
+							<h2 id="pokemonNombre">---</h2>
+							<div class="info-row">
+								<span class="label">Nº:</span>
+								<span id="pokemonId">---</span>
+							</div>
+							<div class="info-row">
+								<span class="label">Tipo:</span>
+								<span id="pokemonTipo">---</span>
+							</div>
+							<div class="info-row">
+								<span class="label">Altura:</span>
+								<span id="pokemonAltura">---</span>
+							</div>
+							<div class="info-row">
+								<span class="label">Peso:</span>
+								<span id="pokemonPeso">---</span>
+							</div>
+						</div>
+
+						<div class="stats-pokemon">
+							<h3>Estadísticas:</h3>
+							<div class="stat-bar">
+								<span class="stat-name">HP:</span>
+								<div class="bar-container">
+									<div class="bar-fill" id="hpBar"></div>
+								</div>
+								<span class="stat-value" id="hpValue">0</span>
+							</div>
+							<div class="stat-bar">
+								<span class="stat-name">ATK:</span>
+								<div class="bar-container">
+									<div class="bar-fill" id="atkBar"></div>
+								</div>
+								<span class="stat-value" id="atkValue">0</span>
+							</div>
+							<div class="stat-bar">
+								<span class="stat-name">DEF:</span>
+								<div class="bar-container">
+									<div class="bar-fill" id="defBar"></div>
+								</div>
+								<span class="stat-value" id="defValue">0</span>
+							</div>
+							<div class="stat-bar">
+								<span class="stat-name">SPD:</span>
+								<div class="bar-container">
+									<div class="bar-fill" id="spdBar"></div>
+								</div>
+								<span class="stat-value" id="spdValue">0</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="navegacion">
+						<button class="btn-nav" onclick="anteriorPokemon()">◀ Anterior</button>
+						<button class="btn-nav" onclick="aleatorio()">Aleatorio</button>
+						<button class="btn-nav" onclick="siguientePokemon()">Siguiente ▶</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="derch">
+			<div class="meme">
+				<header class="cabecera-meme">
+					<span>Meme</span>
+					<div class="botones-meme">
+						<button class="window-button">
+							<img src="https://win98icons.alexmeub.com/images/question-icon.png">
+						</button>
+						<button class="window-button">
+							<img src="https://win98icons.alexmeub.com/images/close-icon.png">
+						</button>
+					</div>
+
+				</header>
+				<div class="imagen-meme">
+					<div class="fondo-imagen-meme">
+						<img src="https://i.pinimg.com/474x/63/39/2f/63392fa88244d183777fdb1018e4b602.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- VENTANA DE ERROR -->
+	<div id="errorModal" class="modal-overlay" style="display: none;">
+		<div class="modal-window">
+			<div class="modal-header">
+				<span>Error</span>
+				<button class="window-button" onclick="cerrarModal()">
+					<img src="https://win98icons.alexmeub.com/images/close-icon.png">
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-icon">
+					<img src="https://win98icons.alexmeub.com/icons/png/msg_error-0.png" alt="Error">
+				</div>
+				<div class="modal-message" id="errorMessage">
+					Error al cargar el Pokémon. Por favor, intenta de nuevo.
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="modal-button" onclick="cerrarModal()">Aceptar</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- FOOTER -->
+		<div class="bar">
+			<div style="display: flex; flex-direction: row;">
+				<div class="start-button">
+					<img src="https://win98icons.alexmeub.com/icons/png/windows-0.png">
+					<span>Start</span>
+				</div>
+				<div class="bar-linea"></div>
+				<div class="abierto">
+					<img src="assets/pokedex.png" style="width: 16px; height: 16px;">
+					<span>Pokédex</span>
+				</div>
+			</div>
+			<div class="time">
+				<img
+					src="https://win98icons.alexmeub.com/icons/png/loudspeaker_rays-0.png">
+				<span id="reloj"></span>
+			</div>
+		</div>
+
+	<script src="script.js"></script>
+	<script src="pokedex.js"></script>
+</body>
+</html>
