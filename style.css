@@ -1,0 +1,315 @@
+@font-face {
+	font-family: "regular";
+	src: url("./assets/fonts/Windows\ Regular.ttf") format("truetype");
+}
+
+body {
+	background-color: teal;
+	font-family: regular;
+	font-weight: 600;
+}
+
+a {
+	text-decoration: none;
+	display: block;
+	width: 100px;
+}
+
+::-webkit-scrollbar {
+	width: 16px;
+	background: #c0c0c0;
+}
+
+::-webkit-scrollbar-track {
+	background: #c0c0c0;
+	border-left: 1px solid #808080;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #c0c0c0;
+	border: 2px solid;
+	border-color: #ffff #404040 #404040 #ffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #b0b0b0;
+}
+
+/* IZQUIERDA */
+
+.izq {
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.boton {
+	padding: 5px;
+	width: 75px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.boton:hover {
+	background-color: rgba(0, 0, 128, 0.3);
+	outline: 1px dotted white;
+}
+
+.boton img {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 2px;
+}
+
+.tama {
+	width: 50px !important;
+	height: 50px !important;
+}
+
+.boton p {
+	margin: 0;
+	color: white;
+	font-weight: 400;
+	font-size: 16px;
+	text-align: center;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* DERECHA */
+
+.derch {
+	float: right;
+	width: 50%;
+	height: 100%;
+	z-index: 1;
+}
+
+.meme {
+	float: right;
+	margin: 20px;
+	background-color: #c6c6c6;
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	border-right: 2px solid rgb(23, 23, 23);
+	border-bottom: 2px solid rgb(23, 23, 23);
+	width: 300px;
+	height: 308px;
+	z-index: 1;
+}
+
+.cabecera-meme {
+	height: 20px;
+	position: relative;
+	text-align: left;
+	color: white;
+	padding: .25em .75em;
+	padding-right: 3px;
+	line-height: 1.4;
+	border-top: 2px solid silver;
+	border-left: 2px solid silver;
+	border-right: 2px solid silver;
+	border-bottom: 2px solid silver;
+	background: navy;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: sans-serif;
+	font-weight: 400;
+}
+
+.botones-meme {
+	display: flex;
+	gap: 5px;
+}
+
+.window-button {
+	background-color: silver;
+	z-index: 10;
+	padding: 0;
+	height: 16px;
+	width: 16px;
+	position: relative;
+	display: block;
+	appearance: none;
+	font-weight: 700;
+	letter-spacing: .05em;
+	border-left: 2px solid #ededed;
+	border-top: 2px solid #ededed;
+	border-right: 2px solid #404040;
+	border-bottom: 2px solid #404040;
+	cursor: pointer;
+}
+
+.window-button:active {
+	border-left: 2px solid #404040;
+	border-top: 2px solid #404040;
+	border-right: 2px solid #ededed;
+	border-bottom: 2px solid #ededed;
+}
+
+.window-button img {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+}
+
+.imagen-meme {
+	margin: 10px;
+	padding: 10px;
+	border-left: 1px solid white;
+	border-top: 1px solid white;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.fondo-imagen-meme {
+	background-color: white;
+	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fondo-imagen-meme img {
+	padding: 5px;
+	width: 60%;
+	height: 60%;
+}
+
+
+/* FOOTER */
+
+.bar {
+	padding: 2px;
+	box-shadow: inset 1px 0 #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: silver;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-top: 1px solid #f4f4f4;
+	border-bottom: 1px solid #4e4e4e;
+	position: fixed;
+	z-index: 9999;
+}
+
+.start-button {
+	margin-left: 2px;
+	margin-bottom: 2px;
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	padding: 3px 6px;
+	background-color: silver;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+	box-shadow: inset 1px 1px #dfdfdf, 1px 0 #000, 0 1px #000, 1px 1px #000;
+	margin-right: 6px;
+	color: #000;
+	cursor: pointer;
+}
+
+.start-button:active {
+	border-top: 1px solid gray;
+	border-left: 1px solid gray;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	box-shadow: inset -1px -1px #dfdfdf;
+}
+
+.start-button img {
+	width: 18px;
+	height: 18px;
+}
+
+.start-button span {
+	font-weight: bold;
+}
+
+.bar-linea {
+	margin-right: 3px;
+	margin-bottom: 2px;
+	display: flex;
+	align-items: center;
+	padding: .3px;
+	background-color: silver;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+	box-shadow: inset 1px 1px #dfdfdf, 1px 0 #000, 0 1px #000, 1px 1px #000;
+}
+
+.abierto {
+	margin-left: 2px;
+	margin-bottom: 2px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 3px 6px;
+	background-color: silver;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+	box-shadow: inset 1px 1px #dfdfdf, 1px 0 #000, 0 1px #000, 1px 1px #000;
+	color: #000;
+	font-weight: 400;
+}
+
+.time {
+	text-align: right;
+	padding: 4px 10px;
+	margin-right: 2px;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	border-top: 1px solid gray;
+	border-left: 1px solid gray;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5px;
+}
+
+.time img {
+	width: 23%;
+	height: 23%;
+}
+
+.time span {
+	font-weight: bold;
+}
+
+/* Clases de fondo de pantalla */
+body.default {
+	background: #008080;
+}
+
+body.verde {
+	background: #23ad1a;
+}
+
+body.morado {
+	background: #bb16b1;
+}
+
+body.amarillo {
+	background: #cedf1c;
+}
+
+body.rosa {
+	background: #f94f8e;
+}
+
+body {
+	transition: background-color 0.3s;
+}
