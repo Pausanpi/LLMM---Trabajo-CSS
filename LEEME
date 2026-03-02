@@ -1,0 +1,13 @@
+# Paula Sánchez Piña 1º ASIR
+
+Esta web simula un escritorio clásico de Windows 98, con varios iconos a la izquierda para abrir diferentes "aplicaciones".
+
+## ¿Qué puedes encontrar?
+- Egg-Timer: un temporizador (el primero dura solo 1 segundo para ver el error).
+- Calculadora: prueba a hacer 1+1
+- Pokédex: busca pokémons por nombre o número (no están todos, pero hay una lista a la izquierda).
+- Minecraft: puede tardar un poco en cargar ya que es un iframe.
+
+Puedes cerrar las ventanas con la X o abriendo otra aplicación.
+
+Hecho para la asignatura de Lenguaje de Marcas.
